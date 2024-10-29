@@ -115,14 +115,14 @@
 
 /* Fundo escuro - com z-index alto para prioridade máxima */
 #popupBackground {
-            display: none;
+    display: none; /* Inicialmente oculto */
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro mais opaco */
-            z-index: 9999; /* Valor alto para aparecer na frente de todos os elementos */
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
         }
         /* Estilo do Pop-Up - z-index também alto */
         #popup {
@@ -130,15 +130,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 40%;
-            height: 60%;
             padding: 20px;
             background-color: rgb(2, 1, 1);
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            position: relative;
-            z-index: 10000; /* Valor maior que o fundo para garantir sobreposição */
+            z-index: 10000;
+            width: 80%; /* Largura responsiva */
+            max-width: 600px; /* Largura máxima */
         }
         /* Estilo do "X" para fechar */
         #closePopup {
