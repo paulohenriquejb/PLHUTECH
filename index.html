@@ -112,6 +112,54 @@
     color: white !important;
     font-weight: bold;
 }
+
+/* Fundo escuro - com z-index alto para prioridade máxima */
+#popupBackground {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro mais opaco */
+            z-index: 9999; /* Valor alto para aparecer na frente de todos os elementos */
+        }
+        /* Estilo do Pop-Up - z-index também alto */
+        #popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            height: 60%;
+            padding: 20px;
+            background-color: rgb(2, 1, 1);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 10000; /* Valor maior que o fundo para garantir sobreposição */
+        }
+        /* Estilo do "X" para fechar */
+        #closePopup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #888;
+        }
+        #closePopup:hover {
+            color: #ff5f5f;
+        }
+
+        #popupBackground img{
+            width: 60%;
+            height: 60%;
+        }
     </style>
 </head>
 <body>
@@ -147,6 +195,16 @@
             </div>
         </div>
     </nav>
+
+    <div id="popupBackground">
+        <div id="popup">
+            <button id="closePopup">✕</button>
+            <p>É com grande satisfação que anunciamos a <strong>Comidia</strong> como nossa nova empresa parceira! 🤝✨</p>
+<p>Essa parceria reforça nosso compromisso em oferecer soluções tecnológicas inovadoras e personalizadas 💡📈.</p>
+            <img src="/img/comidiaicone.jpg" alt="">
+        </div>
+    </div>
+    
     
 
     <!-- Carousel (Slider) -->
@@ -155,6 +213,7 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -165,6 +224,14 @@
                 <p>A Melhor empresa para soluções tecnológicas.</p>
                 
             </div>
+          </div>
+          <div class="comidia carousel-item">
+            <img class="d-block w-100" src="/img/comidia.png" alt="Segundo Slide">
+            <div class="carousel-caption d-none d-md-block propaganda">
+        
+            <p>É com grande satisfação que anunciamos a Comidia como nossa nova empresa parceira! Essa parceria reforça nosso compromisso em oferecer soluções tecnológicas inovadoras e personalizadas</p>
+       
+             </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="/img/tema6.jpeg" alt="Segundo Slide">
@@ -373,8 +440,14 @@
        
  
             </div>
+            
     
           </div>
+
+
+
+        
+
 
 
 
@@ -429,6 +502,7 @@
        
  
             </div>
+            
     
           </div>
 
@@ -438,9 +512,7 @@
                 <img src="/img/tema6.jpeg" alt="">
               <div class="card-body">
                 <h5 class="card-title">Envia_Wats</h5>
-                <p class="card-text">O Envia_Wats é uma aplicação que automatiza o envio de mensagens via WhatsApp para os Representantes Comerciais
-                    (RCA) da empresa ou para outros grupos de pessoas. A ferramenta facilita a comunicação ao transmitir informações
-                    importantes, como faturamento, metas, objetivos, e listas de clientes ainda não positivados etc
+                <p class="card-text">O Envia_Wats é uma aplicação que automatiza o envio de mensagens via WhatsApp 📲, direcionadas aos Representantes Comerciais (RCA) da empresa e a outros grupos de pessoas. A ferramenta facilita a comunicação, transmitindo de forma rápida e eficaz informações essenciais, como faturamento 📊, metas 🎯, objetivos 💪, e listas de clientes ainda não positivados 📋, entre outros!
                     
                     
                </p>
@@ -454,6 +526,36 @@
        
  
             </div>
+
+            
+    
+          </div>
+
+          <div class="col">
+            <div class="card">
+                <img src="/img/painel_controle.png" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Painel de controle</h5>
+                <p class="card-text">Agora ficou muito mais fácil acompanhar o progresso dos seus clientes! Com o nosso novo programa, você pode acompanhar cada etapa do processo 📊✨ <br>
+
+                    🔹 Etapas personalizadas: Orçamento, Aprovação, Criação, Produção, Acabamento e Expedição!<br>
+                    🔹 Clique em cada etapa e veja em que ponto está cada cliente 👤💼<br>
+                    🔹 Fácil e intuitivo – acompanhe tudo de forma rápida e organizada!<br>
+                    
+                    📲 Venha conferir e torne sua gestão de produção mais eficiente 🚀
+                    
+               </p>
+               <a href="https://wa.me/5599982071400?text=Oi%2C%20tudo%20bem%3F%20vim%20atrav%C3%A9s%20do%20site.">
+                <button class="btnpromocao" > vamos conversar sobre?
+                </button>
+                 </a>
+             
+              </div>
+             
+       
+ 
+            </div>
+            
     
           </div>
 
@@ -475,6 +577,9 @@
                     <img src="/img/pcmfrios.JPG" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
+                    <img src="/img/comidiaicone.jpg" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
                     <img src="/img/paes.jpeg" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
@@ -489,6 +594,9 @@
               
                 <div class="slide">
                     <img src="/img/pcmfrios.JPG" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="/img/comidiaicone.jpg" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
                     <img src="/img/paes.jpeg" height="100" width="250" alt="" />
@@ -584,5 +692,17 @@
     });
 </script>
 
+
+<script>
+    // Exibir o pop-up ao carregar a página
+    window.onload = function() {
+        document.getElementById("popupBackground").style.display = "block";
+    };
+
+    // Fechar o pop-up ao clicar no "X"
+    document.getElementById("closePopup").onclick = function() {
+        document.getElementById("popupBackground").style.display = "none";
+    };
+</script>
 
  
